@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>worderby</title>
+        <link rel="stylesheet" href="index.css"/>
+        <script defer src="src/index.js"></script>
+    </head>
+    <body>
+
+        
+        <div id="header">
+            <h1><span id="title-1" class="unfocused"></span><span id="title-2" class="focused">word</span><span id="title-3" class="unfocused">erby</span></h1>
+            <div id="instructions" class="centered">
+                <p>Use the end of one word to start a new word</p>
+                <p>The more letters you steal, the more points you get!</p>
+            </div>
+        </div>
+
+
+        <div id="play-area">
+            <form id="player-form" autocomplete="off">
+                <span id="prompt-and-input" class="popup">
+                    <span id="prompt-unusable" class="popup">b</span><!--
+                    --><span id="controls-popup-container" class="popup"><!--
+                        --><span id="popup" class="popuptext">press <strong>Shift ←/→</strong></span><!--
+                        --><span id="prompt-usable">egin</span><!--
+                    --></span><!--
+                    --><input id="player-input" type="text" spellcheck="false" placeholder="gerbread">
+                </span>
+                <br>
+                <button type="button" id="voice-toggle">Voice Off</button><input type="submit">
+                <br>
+                <button type="button" id="rules-button">How to Play</button>
+            </form>
+            <div><div id="frankenword" class="worderby">begin</div></div>
+        </div>
+
+
+        <div id="game-info" class="footer">
+            <div id="scorecards">
+                <div id="player-1-card" class="scorecard-container">
+                    <h2 id="player-1-title">Player 1</h2>
+                    <p id="player-1-total">0</p>
+                    <ol id="player-1-score" class="scorecard">
+                    </ol>
+                </div>
+                <div id="player-2-card" class="scorecard-container">
+                    <h2 id="player-2-title">Player 2</h2>
+                    <p id="player-2-total">0</p>
+                    <ol id="player-2-score" class="scorecard">
+                    </ol>
+                </div>
+            </div>
+            <div id="menu">
+                <div id="expand-words"><button id="expand-button">Expand</button></div>
+                <div id="new-game"><button id="new-game-button">New Game</button></div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

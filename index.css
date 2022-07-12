@@ -1,0 +1,393 @@
+body {
+    font-size: 16pt;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 239, 204);
+    color: rgb(106, 72, 0);
+    align-content: center;
+}
+
+#header,
+#play-area,
+#frankenword,
+#new-game {
+    text-align: center;
+}
+
+#play-area {
+    padding-bottom: 100px;
+}
+
+#menu {
+    display: inline-block;
+    text-align: center;
+    max-width: 200px;
+}
+
+/* div {
+    border-style: dotted;
+} */
+
+#play-area {
+    max-width: fit-content;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#new-game, #expand-words {
+    width: fit-content;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 8px;
+    display: block;
+}
+
+button, input[type="submit"] {
+    background-color: #0000005d;
+    cursor: pointer;
+    border: solid;
+    border-width: 2px;
+    border-color: transparent;
+    border-radius: 5px;
+    color: white;
+    /* min-width: 100px; */
+    padding: 4px 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.2s;
+}
+
+button.engaged {
+    background-color:rgb(148, 101, 0);
+    border-style: transparent;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color:rgb(177, 121, 0);
+    border-style: solid;
+    border-color: rgb(255, 174, 0);
+}
+
+button:active, input[type="submit"]:active {
+    background-color:rgb(80, 55, 0);
+    color: rgb(152, 152, 152);
+    border-color: transparent;
+}
+
+input[type="submit"][disabled] {
+    background-color:rgb(80, 55, 0);
+    color: rgb(152, 152, 152);
+    border-color: transparent;
+    cursor: default;
+}
+
+div#header {
+    padding-top: 0;
+}
+
+#header h1 {
+    font-size: 12vw;
+    font-family: 'American Typewriter';
+    margin-block-start: 30px;
+    margin-block-end: 15px;
+}
+
+#header p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+#player-form {
+    margin-block-start: 2em;
+    /* margin-block-end: 2em; */
+}
+
+.centered {
+    margin: 0px auto;
+}
+
+#instructions {
+    max-width: 800px;
+    text-align: center;
+}
+
+#player-form, #player-input {
+    font-size: 30pt;
+}
+
+#prompt-and-input {
+    white-space: nowrap;
+}
+
+.worderby {
+    font-family: 'American Typewriter';
+    font-size: 20pt;
+    cursor: pointer;
+    width:fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: anywhere;
+    padding-bottom: 4px;
+}
+
+#frankenword.worderby {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color:rgb(92, 1, 80);
+}
+
+#frankenword.worderby:hover {
+    color:rgb(164, 0, 142);
+}
+
+#frankenword.worderby:active {
+    color:rgb(92, 1, 80);
+}
+
+#overlay .worderby {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:rgb(208, 0, 180);
+}
+
+#overlay .worderby:hover {
+    color:rgb(240, 81, 219);
+}
+
+#overlay .worderby:active {
+    color:rgb(208, 0, 180);
+}
+
+#overlay p {
+    font-size: 24pt;
+    color:rgb(255, 192, 55);
+}
+
+.focused {
+    font-weight: bold;
+    color: rgb(164, 0, 142)
+}
+
+.unfocused {
+    font-weight: 100;
+}
+
+.using {
+    color: rgb(164, 0, 142);
+}
+
+.not-using {
+    font-weight: normal;
+    color: rgba(162, 0, 140, 0.482);
+}
+
+#prompt-usable {
+    font-weight: bold;
+}
+
+#prompt-unusable {
+    color: rgba(92, 63, 1, 0.35);
+    transition: color 0.1s;
+}
+
+#prompt-unusable.alert {
+    color: red;
+}
+
+#player-input {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgb(106, 72, 0);
+    padding: 0px;
+    background-color: #ffefcd;
+    color:rgb(92, 1, 80);
+    overflow-wrap: anywhere;
+    /* width: 100px; */
+}
+
+::placeholder {
+    color:rgba(92, 63, 1, 0.35);
+}
+
+#scorecards h2, #scorecards p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.scorecard-container {
+    text-align: left;
+    margin-top: 0px;
+    vertical-align: top;
+    min-width: 200px;
+    display: inline-block;
+}
+
+#game-info {
+    min-width: 560px;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+#player-1-card {
+    float:left;
+}
+
+#player-2-card {
+    float:right;
+}
+
+.scorecard-container h2, .scorecard-container p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#player-1-title{
+    margin-left: 0px;
+}
+
+#player-2-title{
+    margin-left: 0px;
+}
+.scorecard {
+    list-style-type: none;
+    margin-top: 0px;
+    vertical-align: top;
+}
+
+/* #player-1-score { 
+    
+        
+} */
+
+#player-2-score {
+    margin-left: 0px;
+}
+
+.rounds {
+    margin-top: 0px;
+}
+
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: fit-content;
+    background-color: rgba(85, 85, 85, 0.735);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.popuptext {
+    font-size: 14pt;
+    font-family: Arial, sans-serif;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(85, 85, 85, 0.735) transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+#overlay {
+    position: fixed;
+    /* display: none; */
+    width: 80%;
+    height: 80%;
+    max-width: 560px;
+    max-height: 650px;
+    border: 5px ridge rgb(176, 120, 0);
+    border-radius: 20px;
+    box-shadow: black 6px 8px 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto;
+    background-color: rgba(0, 0, 0, 0.99);
+    z-index: 2;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 5px 5px;
+    text-align: center;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s
+}
+
+#overlay > h2 {
+    margin-block-end: 0;
+}
+
+#overlay li {
+    text-align: left;
+}
+
+#overlay button {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+#overlay button:not(button:hover) {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 226, 164);
+    box-shadow: black 0px 0px 10px;
+}
+
+.footer.expand {
+    height: fit-content;
+}
